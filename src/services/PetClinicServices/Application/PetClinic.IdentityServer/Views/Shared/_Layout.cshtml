@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+
+    <title>PetClinic.IdentityServer</title>
+
+    <environment>
+        @*<link rel="stylesheet" type="text/css" href="ie6.css" />*@
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/preloader/preloader.css" asp-append-version="true" />
+    </environment>
+   
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - BCBA_ChatBotAlicia.IdentityServer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+    <environment>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <link rel="stylesheet" href="~/preloader/preloader.css" asp-append-version="true" />
+
+    </environment>
+    
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

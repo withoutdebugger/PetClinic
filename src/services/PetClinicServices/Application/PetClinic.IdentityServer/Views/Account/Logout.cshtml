@@ -1,0 +1,25 @@
+﻿
+    <div class="logout-body">
+        <br />
+        <br />
+        <br />
+        <div class="container logout-images" align="center">
+            <img class="block-center rounded" width="220" src="~/logo.png" alt="Image" />
+        </div>
+        <br />
+        <div class="contaitner divlogo" align="center">
+            <h3>Se ha cerrado sesión</h3>
+            <br />
+            <br />
+
+            <form asp-action="Logout">
+                <input type="hidden" name="logoutId" value="@Model.LogoutId" />
+                <fieldset>
+                    <div class="form-group">
+                        <button class="btn bg-clinic block full-width m-b">Ingresar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+

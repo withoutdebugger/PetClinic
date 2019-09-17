@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>PetClinic_Services.Application</AssemblyName>
+    <RootNamespace>PetClinic_Services.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\PetClinic_Services.Domain\PetClinic_Services.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\PetClinic_Services.Persistence\PetClinic_Services.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

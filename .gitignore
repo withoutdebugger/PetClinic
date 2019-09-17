@@ -232,6 +232,13 @@ orleans.codegen.cs
 # RIA/Silverlight projects
 Generated_Code/
 
+# ignore appsettings configuration files
+**/appsettings.json
+**/appsettings.development.json
+**/appsettings.staging.json
+**/appsettings.production.json
+
+
 # Backup & report files from converting an old project file
 # to a newer Visual Studio version. Backup files are not needed,
 # because we have git ;-)
