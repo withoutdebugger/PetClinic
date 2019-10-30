@@ -10,7 +10,7 @@
  */
 
 import React, { Component } from 'react';
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 // App Routes
 import Routes from './Routes';
 import { AuthProvider } from "./auth/providers/authProvider";
@@ -21,7 +21,9 @@ import "./Vendor";
 import './styles/bootstrap.scss';
 import './styles/app.scss'
 import 'react-dual-listbox/lib/react-dual-listbox.css';
-
+import 'react-datetime/css/react-datetime.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css'
+import 'react-big-calendar/lib/addons/dragAndDrop/styles.css'
 
 class App extends Component {
   render() {
@@ -36,7 +38,7 @@ class App extends Component {
 
       <AuthProvider>
         <BrowserRouter basename={basename}>
-            <Routes />
+          <Routes />
         </BrowserRouter>
       </AuthProvider>
     );

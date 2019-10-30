@@ -16,6 +16,7 @@ using Newtonsoft.Json.Serialization;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Linq;
+using PetClinic_Services.Persistence.Models;
 
 namespace PetClinic_Services
 {
@@ -74,16 +75,22 @@ namespace PetClinic_Services
             });
 
             //Contexts
-            //services.AddScoped(typeof(algdevprimerovosbdContext), typeof(algdevprimerovosbdContext));
+            services.AddScoped(typeof(petsContext), typeof(petsContext));
             services.AddScoped(typeof(IdentityContext), typeof(IdentityContext));
 
             //Services
             services.AddScoped(typeof(UserService), typeof(UserService));
             services.AddScoped(typeof(RoleService), typeof(RoleService));
             services.AddScoped(typeof(UserRoleService), typeof(UserRoleService));
+            services.AddScoped(typeof(ClientService), typeof(ClientService));
+            services.AddScoped(typeof(PatientService), typeof(PatientService));
+            services.AddScoped(typeof(CountriesService), typeof(CountriesService));
+            services.AddScoped(typeof(IdentificationsTypesService), typeof(IdentificationsTypesService));
+            services.AddScoped(typeof(QueryTypesService), typeof(QueryTypesService));
+            services.AddScoped(typeof(ScheduleService), typeof(ScheduleService));
 
 
-            //services.AddDbContext<algdevprimerovosbdContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<petsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 
             //Add identity framework

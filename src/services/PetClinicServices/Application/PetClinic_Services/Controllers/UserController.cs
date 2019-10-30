@@ -49,6 +49,16 @@ namespace PetClinic_Services.Controllers
             return await _userService.GetAll();
         }
 
+        [HttpGet("SelectView")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [MapToApiVersion("1.0")]
+        public IEnumerable<SelectView> GetAllSelectView()
+        {
+            return _userService.GetAllSelectView();
+        }
+
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]

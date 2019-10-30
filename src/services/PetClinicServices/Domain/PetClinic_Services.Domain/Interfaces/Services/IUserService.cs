@@ -12,6 +12,7 @@ namespace PetClinic_Services.Domain.Interfaces.Services
     {
         Task<ApplicationUserRoleView> GetById(string userId);
         Task<IEnumerable<ApplicationUserRoleView>> GetAll();
+        IEnumerable<SelectView> GetAllSelectView();
         Task<ApplicationUserRoleView> Post(ApplicationUserRoleView user);
         Task Delete(string userId);
         Task<ApplicationUserRoleView> Edit(ApplicationUserRoleView user);

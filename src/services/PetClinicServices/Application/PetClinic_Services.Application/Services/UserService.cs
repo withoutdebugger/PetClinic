@@ -70,6 +70,25 @@ namespace PetClinic_Services.Application.Services
             }
         }
 
+        public IEnumerable<SelectView> GetAllSelectView()
+        {
+            try
+            {
+                return (from c in _userManager.Users.ToList()
+                        select new SelectView
+                        {
+                            Value = c.Id,
+                            Label = c.LastName + ", " + c.FirstName
+                        }).ToList();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        
+
         public async Task<ApplicationUserRoleView> Post(ApplicationUserRoleView user)
         {
             try

@@ -1,9 +1,10 @@
-import {REMOVE_USER,ADD_USER,VIEW_USERS, VIEW_USER, EDIT_USER} from '../actions/types';
+import {REMOVE_USER,VIEW_USERS_SELECTVIEW,ADD_USER,VIEW_USERS, VIEW_USER, EDIT_USER} from '../actions/types';
 
 //state inicial, cada reducer debe tener su propio state.
 const initialState= {
     users: [],
-    user: {user:{}}
+    user: {user:{}},
+    usersSelectView: []
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -13,6 +14,11 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 users: action.payload
             }
+        case VIEW_USERS_SELECTVIEW:
+                return{
+                    ...state,
+                    usersSelectView: action.payload
+                }
         case REMOVE_USER:
             return{
                 ...state,

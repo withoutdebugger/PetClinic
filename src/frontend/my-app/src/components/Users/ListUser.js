@@ -11,7 +11,7 @@ class ListUser extends React.Component{
 
     state= {   
         swalOption5: {
-            title: 'Está seguro de eliminar éste usuario?',
+            title: 'Está seguro de eliminar éste usuario ?',
             icon: 'warning',
             buttons: {
                 cancel: {
@@ -45,16 +45,9 @@ class ListUser extends React.Component{
         }
     }
     
-
-    getInfoPerson = e=>{
-        this.setState({
-            personId: parseInt(e.target.value)
-        })
-    }
-
     render(){
     
-        const {id} = this.props.id.user;         
+        const {id} = this.props.id.user;    
         return(
              <Row className="mb-0">
              <Col  xl={1} xs={1} sm={1} lg={1} md={1}>
